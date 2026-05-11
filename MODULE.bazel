@@ -1,0 +1,14 @@
+module(
+    name = "bazel-vite-demo",
+    version = "0.0.0",
+)
+
+bazel_dep(name = "aspect_rules_js", version = "3.0.3")
+
+npm = use_extension("@aspect_rules_js//npm:extensions.bzl", "npm")
+npm.npm_translate_lock(
+    name = "npm",
+    npmrc = "//app:.npmrc",
+    pnpm_lock = "//app:pnpm-lock.yaml",
+)
+use_repo(npm, "npm")
