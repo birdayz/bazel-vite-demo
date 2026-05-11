@@ -83,7 +83,7 @@ export function App() {
 
   if (!hasMessages) {
     return (
-      <div className="dark flex h-dvh flex-col items-center justify-center bg-background px-4 pb-16">
+      <div className="flex h-dvh flex-col items-center justify-center bg-background px-4 pb-16">
         <div className="flex w-full max-w-2xl flex-col items-center gap-8">
           <h1 className="text-center text-3xl font-bold tracking-tight text-foreground">
             Bazel + Vite Demo
@@ -98,7 +98,7 @@ export function App() {
   }
 
   return (
-    <div className="dark flex h-dvh flex-col bg-background">
+    <div className="flex h-dvh flex-col bg-background">
       <div className="flex-1 overflow-y-auto">
         <div className="mx-auto max-w-3xl px-4">
           {messages.map((msg, i) => (
